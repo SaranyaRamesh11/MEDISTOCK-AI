@@ -1,0 +1,192 @@
+{
+  "dataset_summary": {
+    "total_records": 10000,
+    "train_records": 8000,
+    "test_records": 2000,
+    "features_count": 13,
+    "target_variable": "Demand"
+  },
+  "selected_model": "Linear Regression",
+  "selection_rationale": "Linear Regression provides highly explainable coefficients, rapid sub-millisecond inference for hospital real-time queries, and optimal empirical convergence without overfitting on clinical census inputs.",
+  "models": {
+    "Linear Regression": {
+      "name": "Linear Regression",
+      "mae": 12.701,
+      "rmse": 18.006,
+      "r2_score": 0.9057,
+      "mape": 8.1,
+      "status": "Selected (Primary Production Model)"
+    },
+    "Random Forest Regression": {
+      "name": "Random Forest Regression",
+      "mae": 9.566,
+      "rmse": 12.782,
+      "r2_score": 0.9525,
+      "mape": 5.94,
+      "status": "Benchmark Comparison Model"
+    }
+  },
+  "top_features": [
+    {
+      "feature": "Emergency_Cases",
+      "raw_feature": "Emergency_Cases",
+      "rf_importance": 33.76,
+      "linear_weight": 37.7
+    },
+    {
+      "feature": "Seasonal_Factor",
+      "raw_feature": "Seasonal_Factor",
+      "rf_importance": 19.48,
+      "linear_weight": 22.69
+    },
+    {
+      "feature": "Med: Paracetamol 500mg",
+      "raw_feature": "Medicine_Paracetamol 500mg",
+      "rf_importance": 19.3,
+      "linear_weight": 0.42
+    },
+    {
+      "feature": "Daily_Usage",
+      "raw_feature": "Daily_Usage",
+      "rf_importance": 13.86,
+      "linear_weight": 47.63
+    },
+    {
+      "feature": "Patient_Count",
+      "raw_feature": "Patient_Count",
+      "rf_importance": 4.29,
+      "linear_weight": 0.28
+    },
+    {
+      "feature": "Med: Azithromycin 500mg",
+      "raw_feature": "Medicine_Azithromycin 500mg",
+      "rf_importance": 2.21,
+      "linear_weight": 40.4
+    },
+    {
+      "feature": "Med: Amlodipine 5mg",
+      "raw_feature": "Medicine_Amlodipine 5mg",
+      "rf_importance": 1.52,
+      "linear_weight": 43.74
+    },
+    {
+      "feature": "Cat: Antidiabetics",
+      "raw_feature": "Category_Antidiabetics",
+      "rf_importance": 0.84,
+      "linear_weight": 24.7
+    },
+    {
+      "feature": "Holiday",
+      "raw_feature": "Holiday",
+      "rf_importance": 0.77,
+      "linear_weight": 7.27
+    },
+    {
+      "feature": "Med: Human Insulin 100IU/ml",
+      "raw_feature": "Medicine_Human Insulin 100IU/ml",
+      "rf_importance": 0.67,
+      "linear_weight": 16.67
+    },
+    {
+      "feature": "Emergency_Ratio",
+      "raw_feature": "Emergency_Ratio",
+      "rf_importance": 0.46,
+      "linear_weight": 6.02
+    },
+    {
+      "feature": "Season: Autumn",
+      "raw_feature": "Season_Autumn",
+      "rf_importance": 0.35,
+      "linear_weight": 0.47
+    },
+    {
+      "feature": "Med: Dexamethasone 4mg/ml Inj",
+      "raw_feature": "Medicine_Dexamethasone 4mg/ml Inj",
+      "rf_importance": 0.33,
+      "linear_weight": 14.92
+    },
+    {
+      "feature": "Cat: Corticosteroids",
+      "raw_feature": "Category_Corticosteroids",
+      "rf_importance": 0.32,
+      "linear_weight": 14.92
+    },
+    {
+      "feature": "Med: Enoxaparin 40mg/0.4ml Syringe",
+      "raw_feature": "Medicine_Enoxaparin 40mg/0.4ml Syringe",
+      "rf_importance": 0.28,
+      "linear_weight": 4.07
+    }
+  ],
+  "error_stats": {
+    "mean_residual": -0.451,
+    "std_residual": 18.0,
+    "max_error": 101.469,
+    "sample_actuals": [
+      161,
+      155,
+      158,
+      112,
+      130,
+      135,
+      137,
+      101,
+      161,
+      166,
+      154,
+      164,
+      128,
+      256,
+      162,
+      66,
+      195,
+      224,
+      119,
+      168
+    ],
+    "sample_preds_lin": [
+      157.0,
+      155.6,
+      158.8,
+      120.9,
+      137.3,
+      161.7,
+      147.1,
+      88.1,
+      176.6,
+      196.0,
+      145.0,
+      163.2,
+      127.1,
+      257.2,
+      167.2,
+      63.4,
+      190.4,
+      214.9,
+      120.9,
+      175.3
+    ],
+    "sample_preds_rf": [
+      162.7,
+      168.9,
+      151.2,
+      116.2,
+      137.4,
+      140.7,
+      142.8,
+      101.2,
+      161.7,
+      150.1,
+      146.9,
+      173.6,
+      134.7,
+      250.2,
+      168.6,
+      78.4,
+      178.7,
+      201.8,
+      122.9,
+      174.2
+    ]
+  }
+}
